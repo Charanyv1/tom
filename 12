@@ -1,0 +1,66 @@
+-----Greatest
+
+package com.bnmit;
+
+public class Greatest {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+}
+
+
+
+-------GtTest
+
+package com.bnmit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class GtTest {
+
+    Greatest calc = new Greatest();   // ✔ fixed class name
+
+    @Test
+    void testAdd() {
+        assertEquals(5, calc.add(2, 3));
+    }
+
+    @Test
+    void testSubtract() {
+        assertEquals(1, calc.subtract(3, 2));
+    }
+
+    @Test
+    void testMultiply() {
+        assertEquals(6, calc.multiply(2, 3));
+    }
+
+    @Test
+    void testDivide() {
+        assertEquals(2, calc.divide(4, 2));
+    }
+
+    @Test
+    void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> calc.divide(4, 0));
+    }
+}
+
