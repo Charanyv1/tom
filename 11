@@ -18,6 +18,6 @@ public class CalculatorTest {
 
     @Test
     public void testAdd() {
-        assertEquals(14, obj.add(10, 5));
+        assertEquals(15, obj.add(10, 5));
     }
 }
