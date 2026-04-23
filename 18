@@ -31,5 +31,5 @@ COMMENTS
 docker build -t name  .
 docker tag name username/name:v1
 docker push username/name:v1
-CMD ["java", "Grade"]
+
 
